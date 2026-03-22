@@ -65,7 +65,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
     };
 
-    const upgradePlan = async (plan: string) => {
+    const upgradePlan = async (plan: 'FREE' | 'PRO' | 'MENTOR') => {
         if (!user) return;
         const { error } = await supabase
             .from('users')
@@ -162,7 +162,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
 
     return (
-        <AuthContext.Provider value={{ session, user, profile, loading, signOut, refreshProfile, upgradePlan }}>
+        <AuthContext.Provider value={{ session, user, profile, loading, signOut, refreshProfile, upgradePlan, updateStreak }}>
             {children}
         </AuthContext.Provider>
     );
