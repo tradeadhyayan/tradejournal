@@ -1,0 +1,6 @@
+Date,Instrument,Direction,Entry,Exit,Quantity,AssetClass,Tags,Notes
+2026-01-20,RELIANCE,LONG,2450.50,2510.00,10,STOCKS,"Breakout,Volume Surge",Professional buy order seen on tape
+2026-01-21,NIFTY,SHORT,21500.00,21420.00,50,INDEX,"Gap Fill,Resistance",Selling pressure at day high
+2026-01-22,BTCUSDT,LONG,42000.00,43500.00,1,CRYPTO,"Trend Follow",MA cross confirm
+2026-01-23,GOLD,LONG,2020.00,2015.00,5,COMMODITIES,"Stop Hit",Risk managed tight
+2026-01-24,HDFCBANK,LONG,1550.00,1580.00,100,STOCKS,"VCP Pattern",Volatility contraction breakout

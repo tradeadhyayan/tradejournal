@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --dark-mode: class;
+}
+
+@layer base {
+  :root {
+    --app-bg: #f8fafc;
+    --app-card: #ffffff;
+    --app-header-bg: #ffffff;
+    --app-sidebar-bg: #ffffff;
+    --app-border: #f1f5f9;
+    --app-text: #0f172a;
+    --app-text-muted: #64748b;
+    --app-accent: #6366f1;
+    --app-nav-active: #f5f3ff;
+
+    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.08);
+
+    --font-heading: 'Quicksand', 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    --font-quicksand: 'Quicksand', sans-serif;
+  }
+}
+
+@layer base {
+  html {
+    @apply text-[var(--app-text)];
+    font-size: 14px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--app-bg)] text-[var(--app-text)] antialiased transition-colors duration-500 selection:bg-indigo-500/20 m-0 p-0;
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    @apply tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-6xl font-extrabold leading-[1.1];
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-bold;
+  }
+
+  .sub-text {
+    @apply text-[13px] md:text-sm text-[var(--app-text-muted)] font-medium;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-300;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-[var(--app-card)]/80 backdrop-blur-md border border-[var(--app-border)] rounded-2xl shadow-sm;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold transition-all hover:bg-indigo-700 active:scale-95 shadow-lg shadow-indigo-500/20;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-slate-900 border border-slate-200 rounded-xl font-semibold transition-all hover:bg-slate-50 active:scale-95 shadow-sm;
+  }
+
+  /* Removed .nav-item-active gradient style to be handled directly or simplified */
+  .nav-item-active {
+    @apply bg-indigo-50 text-indigo-600 border-r-2 border-indigo-500;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
