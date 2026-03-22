@@ -392,7 +392,7 @@ export const api = {
         }
     },
     webinar: {
-        register: async (registration: { name: string, whatsapp: string, webinar_date: string, email?: string }) => {
+        register: async (registration: { name: string, whatsapp: string, webinar_date: string, email?: string, status?: string }) => {
             const { data, error } = await supabase
                 .from('webinar_registrations')
                 .insert(registration)

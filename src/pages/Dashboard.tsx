@@ -20,7 +20,8 @@ import {
     Settings,
     CheckCircle2,
     HeartCrack,
-    ShieldAlert
+    ShieldAlert,
+    RotateCcw
 } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { cn } from '@/lib/utils';
@@ -134,7 +135,7 @@ export default function Dashboard() {
                                     <Sparkles size={12} className="text-indigo-600" />
                                     <span className="text-[10px] font-bold text-indigo-600">Premium Membership</span>
                                 </div>
-                                {profile?.plan === 'PREMIUM' && (
+                                {(profile?.plan === 'PRO' || profile?.plan === 'MENTOR') && (
                                     <div className="flex items-center gap-2 px-3 py-1 bg-amber-50 rounded-full border border-amber-200">
                                         <Trophy size={11} className="text-amber-600" />
                                         <span className="text-[10px] font-bold text-amber-600">Pro</span>

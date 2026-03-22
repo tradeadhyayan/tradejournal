@@ -96,7 +96,7 @@ export default function Settings() {
                             <div className="mt-6">
                                 <span className={cn(
                                     "px-6 py-2 rounded-full text-[9px] font-bold  uppercase border shadow-sm",
-                                    profile?.plan === 'PREMIUM' ? "bg-amber-50 text-amber-600 border-amber-200" : "bg-indigo-50 text-indigo-600 border-indigo-200"
+                                    (profile?.plan === 'PRO' || profile?.plan === 'MENTOR') ? "bg-amber-50 text-amber-600 border-amber-200" : "bg-indigo-50 text-indigo-600 border-indigo-200"
                                 )}>
                                     {profile?.plan || 'Free'} Membership
                                 </span>

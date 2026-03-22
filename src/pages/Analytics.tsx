@@ -54,13 +54,13 @@ export default function Analytics() {
     const handleUpgrade = async () => {
         try {
             await openCheckout(1499, 'Pro Annual Subscription');
-            await upgradePlan('PREMIUM');
+            await upgradePlan('PRO');
         } catch (e) {
             console.error(e);
         }
     };
 
-    const isPremium = profile?.plan === 'PREMIUM';
+    const isPremium = profile?.plan === 'PRO' || profile?.plan === 'MENTOR';
 
     // --- Calculations ---
     const mistakeStats: Record<string, number> = {};
