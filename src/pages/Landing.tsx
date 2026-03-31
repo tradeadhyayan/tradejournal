@@ -80,7 +80,7 @@ export default function Landing() {
 
                     <h1 className="text-4xl md:text-7xl font-heading tracking-tighter mb-4 md:mb-8 leading-[1.1] text-slate-900">
                         Improve Your Trading.<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-indigo-600">Trade Smarter.</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-indigo-600">Refine Your Edge.</span>
                     </h1>
 
                     <h2 className="text-lg md:text-2xl font-semibold text-slate-600 mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -130,29 +130,32 @@ export default function Landing() {
                         </div>
                         <div className="inline-block p-1 px-1 bg-white border border-slate-200 rounded-[2rem] shadow-sm">
                             <div className="px-10 py-5 bg-indigo-600 rounded-[1.8rem] text-white">
-                                <p className="text-xl font-bold font-heading">Copy, Paste & Grow with Trade Adhyayan.</p>
+                                <p className="text-xl font-bold font-heading">Trade Adhyayan helps you to fix this.</p>
                             </div>
                         </div>
                     </div>
                     <div className="relative">
-                        <div className="relative p-10 bg-white border border-slate-200 rounded-[3rem] shadow-2xl">
+                        <div className="relative p-8 bg-white border border-slate-200 rounded-[2.5rem] shadow-2xl">
                             <div className="absolute -top-12 -right-12 w-32 h-32 bg-indigo-500/10 blur-3xl rounded-full" />
-                            <h3 className="text-xl font-bold font-heading mb-8 flex items-center gap-3">
-                                <XCircle className="text-rose-500" size={24} />
+                            <h3 className="text-lg font-bold font-heading mb-6 flex items-center gap-3 text-slate-900">
+                                <XCircle className="text-rose-500" size={20} />
                                 Why Traders Lose Money
                             </h3>
-                            <div className="space-y-6">
+                            <div className="space-y-5">
                                 <div className="space-y-2">
-                                    <div className="flex justify-between text-xs font-bold font-heading text-slate-500 mb-1">
+                                    <div className="flex justify-between text-[10px] font-bold font-heading text-slate-500 mb-1">
                                         <span>EMOTIONAL CONTROL</span>
-                                        <span>20%</span>
+                                        <span>90% of Traders</span>
                                     </div>
-                                    <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden">
-                                        <div className="h-full w-1/5 bg-rose-500 rounded-full" />
+                                    <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+                                        <div className="h-full w-[90%] bg-rose-500 rounded-full" />
                                     </div>
                                 </div>
-                                <div className="h-3 w-3/4 bg-slate-100 rounded-full" />
-                                <div className="h-3 w-full bg-slate-100 rounded-full" />
+                                <div className="pt-4 border-t border-slate-100">
+                                    <p className="text-[10px] font-bold font-heading text-slate-400 uppercase tracking-wider">
+                                        Source: SEBI Study on Individual F&O Traders (FY22-24)
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
